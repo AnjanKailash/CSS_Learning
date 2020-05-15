@@ -1,0 +1,10 @@
+https://hiqaidc.service-now.com/sys_choice_set.do?sys_id=4348ba8edb5890109bfe02d5ca9619de&sysparm_view=&sysparm_domain=null&sysparm_domain_scope=null&sysparm_record_row=2&sysparm_record_rows=5&sysparm_record_list=source%3d35d5f2fcdb85b700dd3d5583ca9619b6%5estateINhistory%5eORDERBYDESCsys_recorded_at
+1. Check the replace on upgrade check box in production.
+
+2. https://hiqaidc.service-now.com/sys_ui_section.do?sys_id=1b284886db60d05058a161cc13961999&sysparm_view=&sysparm_domain=null&sysparm_domain_scope=null&sysparm_record_row=4&sysparm_record_rows=5&sysparm_record_list=source%3d35d5f2fcdb85b700dd3d5583ca9619b6%5estateINhistory%5eORDERBYDESCsys_recorded_at
+
+3. https://hiqaidc.service-now.com/sys_ui_section.do?sys_id=1b284886db60d05058a161cc13961999&sysparm_view=&sysparm_domain=null&sysparm_domain_scope=null&sysparm_record_row=4&sysparm_record_rows=5&sysparm_record_list=source%3d35d5f2fcdb85b700dd3d5583ca9619b6%5estateINhistory%5eORDERBYDESCsys_recorded_at
+
+source: sys_app table
+
+receiving: sys_store_app
