@@ -1,0 +1,22 @@
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+body {
+    background-image: linear-gradient(to right, #ccc, #272727);
+}
+
+.container > div {
+    background-color: var(--yellow);
+    border-bottom: 1px solid var(--black);
+    font-size: large;
+    text-align: center;
+}
