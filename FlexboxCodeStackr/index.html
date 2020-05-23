@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning Flesbox</title>
+    <link rel="stylesheet" href="custom.css">
+    <style>
+        .flexbox-container {
+            /* display: flex; */
+
+            /* Fluid kind of layout - based on width of items, 
+            they are place in same or different row */
+            /* This is for responsiveness */
+            /* flex-wrap: wrap; */
+
+            /* This is always for main or horizontal axis */
+            /* justify-content: space-evenly; */
+
+            /* This is for cross or vertical axis - aligns each item to each other*/
+            /* align-items: center; */
+
+            /* This aligns entire group  within the container*/
+            /* align-content: center;
+            height: 95vh; */
+
+            /* flex-direction: column; */
+
+            /* It is the combination of flex-direction and flex-wrap */
+            flex-flow: column wrap;
+
+            height: 95vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* align-items: center; */
+            /* align-content: center; */
+        }
+
+        .flexbox-item {
+            width: 15%;
+            background-color: #ff652f;
+            border: 3px solid #272727;
+            color: #fff;
+            font-size: 2em;
+            padding: 20px;
+            margin: 10px;
+            flex-basis: 15%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-1 {
+            min-height: 50px;
+            /* flex-grow: 1; */
+            /* align-self: center; */
+            order: 2;
+        }
+
+        .item-2 {
+            min-height: 100px;
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            /* align-self: flex-end; */
+            order: 1;
+        }
+
+        .item-3 {
+            min-height: 250px;
+            /* align-self: flex-start; */
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox-container">
+        <div class="flexbox-item item-1">Main content</div>
+        <div class="flexbox-item item-2">Right side</div>
+        <div class="flexbox-item item-3">Left aside</div>
+    </div>
+</body>
+</html>
