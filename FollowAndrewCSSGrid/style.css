@@ -1,0 +1,152 @@
+
+/* https://www.youtube.com/watch?v=SPFDLHNm5KQ*/
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+div.wrapper div {
+    padding: 2%;
+}
+
+div.wrapper div:nth-child(even) {
+    background-color: aqua;
+}
+
+div.wrapper div:nth-child(odd) {
+    background-color: blueviolet;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 5px 20px;
+    
+    /* grid-template-columns: 1fr
+    minmax(50px, max-content) 1fr; */
+
+    /* grid-template-columns: repeat(4, 50px 100px); */
+
+    /* grid-template-columns: 1fr repeat(2, 25px 75px) 1fr; */
+
+    /* grid-template-columns: repeat(auto-fill, 50px 100px); */
+
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 70px 100px;
+    grid-auto-rows: minmax(100px, max-content); 
+    grid-auto-flow: colurowmn;
+}
+
+/**
+*   Grid spans
+*/
+#parent {
+    display: grid;
+    grid-gap: 5px 0;
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    grid-template-columns: 
+    [grid-start] 1fr
+    [content-start] 1fr
+    [content-end] 1fr
+    [grid-end];
+    
+    grid-template-rows: 
+    [header-start] 1fr
+    [header-end body-start content-start] 5fr
+    [body-end footer-start content-end] 1fr
+    [footer-end];
+}
+
+#parent div:nth-child(even) {
+    background-color: chartreuse;
+}
+
+#parent div:nth-child(odd) {
+    background-color: darkgoldenrod;
+}
+
+#one {
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+
+    grid-column: grid-start / grid-end;
+}
+
+#two {
+    /* grid-column: 1 / 4; */
+
+    /* row start col start row end col end */
+    /* grid-area: body-start / grid-start / footer-end / content-end; */
+    /* above thing can be replaced by below as we used end and start as names */
+    grid-area: content;
+}
+
+#four {
+    /* grid-column: 2 / -1; */
+    /* grid-column: 2/ span 2; */
+
+    grid-column: content-end / grid-end;
+}
+
+#five, #one {
+    grid-column: grid-start/ grid-end;
+}
+
+
+/* grid areas */
+.areas-demo {
+    display: grid;
+    grid-gap: 5px 10px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav main ads"
+    "nav main featured"
+    "footer footer footer";
+}
+
+.areas-demo div:nth-child(even) {
+    background-color: chartreuse;
+}
+
+.areas-demo div:nth-child(odd) {
+    background-color: darkgoldenrod;
+}
+
+.one {
+    grid-area: header;
+}
+
+.two {
+    grid-area: nav;
+}
+
+.three {
+    grid-area: main;
+}
+
+.four {
+    grid-area: ads;
+}
+
+.five {
+    grid-area: featured;
+}
+
+.six {
+    grid-area: footer;
+}
+
+.extra {
+    grid-row: header-start / footer-end;
+    grid-column: header-start / nav-end;
+    background-color: red;
+    outline: 1px solid black;
+    opacity: .5;
+}
+
+/* there are also properties like justify-content, align-content with values start, end center, stretch
+space-between, space-around, space-evenly */
